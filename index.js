@@ -32,10 +32,10 @@ myInputs.forEach(element => {
             if(passwordCon.value == password.value){
                 removeError(element)
                 element.nextElementSibling.textContent = ""
-                passwordCon.style.border = "1px solid #294936"
+                passwordCon.style.border = "2px solid #294936"
             }else{
                 errorMessage(element)
-                passwordCon.style.border = "1px solid red"
+                passwordCon.style.border = "2px solid red"
             }
         }else if(element.validity.valid){
             removeError(element)

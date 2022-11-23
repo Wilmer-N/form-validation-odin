@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form-container">
+        <form novalidate>
+            <label for="mail">Mail</label>
+                <input required id="mail" type="email">
+            <label for="country">country</label>
+                <input required id="country" type="text">
+            <label for="zip">zip</label>
+                <input required id="zip" minlength="5" maxlength="5" type="number">
+            <label for="password">password</label>
+                <input required id="password" type="password">
+            <label for="password-con">Confirm</label>
+                <input required id="password-con" type="password">
+            <button type="button" id="submit-btn">Submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

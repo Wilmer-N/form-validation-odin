@@ -4,16 +4,18 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-color: #2b4d2f;
     display: grid;
     justify-items: center;
     align-items: center;
     height: 100vh;
 }
 #form-container{
-    width: 45%;
+    width: 60%;
     min-width: 600px;
-    height: 70vh;
+    max-width: 1000px;
+    height: 80vh;
+    max-height: 800px;
     background-color: #fff;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -21,7 +23,10 @@ body{
 }
 #side{
     border-radius: 20px 0 0 20px;
-    background-color: blueviolet;
+    border: 2px solid white;
+    background-color: #294936;
+    background-image: url("./how-and-why-you-should-shoot-vertical-landscape-photos-3.avif");
+    background-size: cover;
 }
 
 form{
@@ -32,12 +37,21 @@ form{
 form > div{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 form > div > input{
     width: 80%;
+    border: 2px solid #ddd;
+    height: 25px;
+    border-radius: 3px;
+    padding: 0.4rem;
+    background-color: #a9d4ba;
 }
 input:invalid{
     border: 1px solid red;
+}
+input:valid{
+    border: 1px solid #294936;
 }
 #password-div{
     grid-row: 3 / 4;
@@ -58,6 +72,8 @@ button{
 .error-message{
     width: 80%;
     font-size: 10px;
+    position: absolute;
+    top: calc(15px + 25px);
 }  
 .active-error{
     padding: 10px;

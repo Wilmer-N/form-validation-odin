@@ -9,17 +9,34 @@
 </head>
 <body>
     <div id="form-container">
+        <div id="side"></div>
         <form novalidate>
-            <label for="mail">Mail</label>
-                <input required id="mail" type="email">
-            <label for="country">country</label>
-                <input required id="country" type="text">
-            <label for="zip">zip</label>
-                <input required id="zip" minlength="5" maxlength="5" type="number">
-            <label for="password">password</label>
-                <input required id="password" type="password">
-            <label for="password-con">Confirm</label>
-                <input required id="password-con" type="password">
+            <div>
+                <label for="mail">Mail</label>
+                    <input minlength="3" required id="mail" type="email">
+                    <span id="mail-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="country">Country</label>
+                    <input required id="country" pattern="[^0-9]*" type="text">
+                    <span id="country-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="zip">Zip-Code</label>
+                    <input required id="zip" pattern="[0-9]{5}">
+                    <span class="error-message"></span>
+            </div>
+            <div id="password-div">
+                <label for="password">Password</label>
+                    <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required id="password" type="password">
+                    <span id="password-error" class="error-message"></span>
+            </div>
+            <div id="password-con-div">
+                <label for="password-con">Confirm</label>
+                    <input required id="password-con" type="password">
+                    <span id="password-con-error" class="error-message"></span>
+            </div>
+            <div></div>
             <button type="button" id="submit-btn">Submit</button>
         </form>
     </div>
